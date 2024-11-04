@@ -1,5 +1,6 @@
 sentence-transformers==2.2.2
 langchain
+ipykernel
 flask
 pypdf
 python-dotenv
