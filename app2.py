@@ -65,12 +65,16 @@ def index():
 
 @app.route("/get", methods=["GET", "POST"])
 def chat():
-    msg = request.form["msg"]
-    input = msg
+    data = request.get_json()
+
+    if not data or 'msg' not in data:
+        return jsonify({"error": "Invalid request, 'msg' field is required"}), 400
+
+    input = data['msg']
     print(input)
-    result=rag_chain.invoke({"input": msg})
+    result=rag_chain.invoke({"input": input})
     print("Response : ", result["answer"])
-    return str(result["answer"])
+    return jsonify({"response": result["answer"]})
 
 
 
