@@ -25,7 +25,7 @@ load_dotenv()
 # os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
 
 PINECONE_API_KEY = os.getenv('PINECONE_API_KEY')
-OPENAI_API_KEY="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"
+OPENAI_API_KEY=os.getenv('OPENAI_API_KEY')
 
 
 
