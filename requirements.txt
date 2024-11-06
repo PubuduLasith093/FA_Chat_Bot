@@ -2,6 +2,7 @@ sentence-transformers==2.2.2
 langchain
 ipykernel
 flask
+streamlit
 pypdf
 python-dotenv
 pinecone[grpc]
